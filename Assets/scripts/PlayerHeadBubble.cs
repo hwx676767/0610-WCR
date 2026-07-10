@@ -11,13 +11,13 @@ public class PlayerHeadBubble : MonoBehaviour
     private float displayDuration = 5f;
 
     [SerializeField]
-    private Vector3 localOffset = new Vector3(2.5f, 2.6f, -0.1f);
+    private Vector3 localOffset = new Vector3(6.4f, 6.9f, -0.1f);
 
     [SerializeField]
-    private Vector2 bubbleSize = new Vector2(420f, 110f);
+    private Vector2 bubbleSize = new Vector2(840f, 220f);
 
     [SerializeField]
-    private float worldScale = 0.012f;
+    private float worldScale = 0.015f;
 
     [SerializeField]
     private Sprite bubbleSprite;
@@ -130,14 +130,14 @@ public class PlayerHeadBubble : MonoBehaviour
         RectTransform textRect = textGo.AddComponent<RectTransform>();
         textRect.anchorMin = Vector2.zero;
         textRect.anchorMax = Vector2.one;
-        textRect.offsetMin = new Vector2(24f, 28f);
-        textRect.offsetMax = new Vector2(-16f, -12f);
+        textRect.offsetMin = new Vector2(48f, 56f);
+        textRect.offsetMax = new Vector2(-32f, -24f);
 
         label = textGo.AddComponent<TextMeshProUGUI>();
         label.font = TMP_Settings.defaultFontAsset;
-        label.fontSize = 26;
+        label.fontSize = 100;
         label.color = new Color(0.12f, 0.12f, 0.12f);
-        label.alignment = TextAlignmentOptions.Center;
+        label.alignment = TextAlignmentOptions.Top;
         label.enableWordWrapping = true;
         label.raycastTarget = false;
     }

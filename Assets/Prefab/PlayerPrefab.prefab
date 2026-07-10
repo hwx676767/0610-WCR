@@ -16,10 +16,10 @@ GameObject:
   - component: {fileID: 5404712885632473532}
   - component: {fileID: 6486917089706045470}
   - component: {fileID: 8610359618266228262}
-  - component: {fileID: 7532487096745463316}
   - component: {fileID: 6268028824857354205}
   - component: {fileID: 5495398674774108064}
   - component: {fileID: 8800000000000000001}
+  - component: {fileID: 8800000000000000002}
   m_Layer: 0
   m_Name: PlayerPrefab
   m_TagString: Player
@@ -83,7 +83,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: 21300000, guid: f5aa30130cdfa2341b11c4b99ce4f3c4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 583dceb4ca66526469d9cfdcd4ebbe1a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -104,7 +104,7 @@ Animator:
   m_GameObject: {fileID: 5033238724702652394}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3f6276a24b847b84eac06400cd24f4db, type: 2}
+  m_Controller: {fileID: 9100000, guid: ff006677889900112233445566778899, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -131,8 +131,12 @@ MonoBehaviour:
   syncDirection: 0
   syncMode: 0
   syncInterval: 0
-  moveSpeed: 5
+  moveSpeed: 8
   animator: {fileID: 9143468881458413463}
+  defaultStandY: -2.5
+  defaultSortingOrder: 10
+  sittingSortingOffset: -2
+  localPlayerSortingOrder: 100
 --- !u!50 &4672757777406173691
 Rigidbody2D:
   serializedVersion: 4
@@ -257,7 +261,7 @@ MonoBehaviour:
   rotationSensitivity: 0.01
   positionPrecision: 0.01
   scalePrecision: 0.01
---- !u!114 &7532487096745463316
+--- !u!114 &8800000000000000002
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -266,14 +270,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 5033238724702652394}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44d7a2f6f63677f4b857cf13b6f281a0, type: 3}
+  m_Script: {fileID: 11500000, guid: 112288990011223344556677889900bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   syncMethod: 0
   syncDirection: 0
   syncMode: 0
   syncInterval: 0
-  playerColor: {r: 1, g: 1, b: 1, a: 1}
+  appearanceIndex: 0
+  appearanceControllers:
+  - {fileID: 9100000, guid: ff006677889900112233445566778899, type: 2}
+  - {fileID: 22100000, guid: 001177889900112233445566778899aa, type: 2}
 --- !u!114 &6268028824857354205
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -321,7 +328,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   displayDuration: 5
-  localOffset: {x: 2.5, y: 2.6, z: -0.1}
-  bubbleSize: {x: 420, y: 110}
-  worldScale: 0.012
+  localOffset: {x: 6.4, y: 6.9, z: -0.1}
+  bubbleSize: {x: 840, y: 220}
+  worldScale: 0.015
   bubbleSprite: {fileID: 21300000, guid: 1abd24dd5507bf645aab0ca1b776281c, type: 3}
