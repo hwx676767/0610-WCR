@@ -62,13 +62,13 @@ public class PlayerController : NetworkBehaviour
 
         if (PlayerInputLock.IsMovementBlocked())
         {
-            rb.velocity = new Vector2(0f, rb.velocity.y);
+            rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
             return;
         }
 
-        rb.velocity = new Vector2(
+        rb.linearVelocity = new Vector2(
             moveInput * moveSpeed,
-            rb.velocity.y
+            rb.linearVelocity.y
         );
     }
 
